@@ -1,0 +1,142 @@
+@use 'sass:color';
+
+$texto-gris:#888;
+$texto-blanco: white;
+
+$base-color-1:red;
+$base-color-2:blue;
+$base-color-3:green;
+
+$base-colors:($base-color-1,$base-color-2,$base-color-3);
+
+
+html {
+    font-family: system-ui,  Verdana, Tahoma, sans-serif;
+    background-color: #ccc;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+article > p {
+  text-wrap: pretty;
+}
+
+strong {
+    display: block;
+}
+
+em {
+  color: blue;
+  font-weight: 600;
+}
+
+@mixin color-palette($base-color) {
+  .color-box-text {
+    color: $texto-gris;
+    }
+
+  .base-color {
+    background-color: $base-color;
+    color: $texto-blanco;
+    width: 150px;
+
+    .color-box-text{
+        color: $texto-blanco;
+    }
+  }
+
+  .darken-1 {
+    background-color: color.adjust($base-color, $lightness: -10%); 
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: 10%);
+    }
+  }
+
+  .darken-2 {
+    background-color: color.adjust($base-color, $lightness: -20%);
+        
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: 20%);
+    }
+  }
+
+  .darken-3 {
+    background-color: color.adjust($base-color, $lightness: -30%);
+      
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: 30%);
+    }
+  }
+
+  .darken-4 {
+    background-color: color.adjust($base-color, $lightness: -40%);
+
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: 40%);
+    }
+  }
+
+  .lighten-1 {
+    background-color: color.adjust($base-color, $lightness: 10%);
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: -10%);
+    }
+  }
+
+  .lighten-2 {
+    background-color: color.adjust($base-color, $lightness: 20%);
+    
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: -20%);
+    }
+  }
+
+  .lighten-3 {
+    background-color: color.adjust($base-color, $lightness: 30%);
+      
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: -30%);
+    }
+  }
+
+  .lighten-4 {
+    background-color: color.adjust($base-color, $lightness: 40%);
+
+    & .color-box-text{
+      color: color.adjust($texto-gris, $lightness: -40%);
+    }
+  }
+}
+
+.container {
+    display: inline-flex;
+    gap: 5px;
+}
+
+
+@each $color in $base-colors {
+  $index: index($base-colors, $color);
+
+  .container:nth-of-type(#{$index}) {
+    @include color-palette($color);
+  }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+
+

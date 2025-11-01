@@ -1,0 +1,103 @@
+@use "sass:color";
+
+$texto-standard: system-ui, verdana, Tahoma, sans-serif;
+$menu-color: #316f80;
+$menu-selected: #1d404a;
+$menu-active: #4e8031;
+$menu-hover:  color.adjust($menu-color, $lightness: 10%);
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ccc;
+  font-family: $texto-standard;
+  width: 100vw;
+  min-width: 200px;
+  flex-shrink: 0;  
+}
+
+h2, h3{
+  margin: 20px 0px;
+  padding-left:5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: $menu-color;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3rem;
+  min-width: 200px;
+  flex-shrink: 0; 
+
+  & a.selected {
+    background-color: $menu-selected;
+  }
+
+  & a:hover {
+    background-color: $menu-hover; 
+  }
+
+  & a:active {
+    background-color: $menu-active;
+  } 
+  
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100%;
+  background-color: $menu-color;
+  color:white;
+  text-decoration:  none;
+}
+
+section > p,
+section > span {
+  display: flex;
+  text-wrap: pretty;
+  margin-top: 1rem;
+  padding-left:5px;
+}
+
+span {
+  font-size: 0;
+
+  &::before{
+    font-size: 1rem;
+    content: "Resultado resoluciones mayores";
+    color:blue;
+  }
+}
+
+@media screen and (max-width:640px){
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: calc(3rem*4);
+  }
+  a {
+    height: 3rem;
+    width: 100%;
+  }  
+  
+  nav a.selected {
+    background-color: $menu-color;
+  }
+  
+  nav a:first-child {
+    background-color: $menu-selected;
+  }
+
+  span::before {
+    content: "Resultado resoluciones menores";
+    color:red
+  }
+}

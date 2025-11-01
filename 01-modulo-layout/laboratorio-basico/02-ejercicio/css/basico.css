@@ -1,0 +1,33 @@
+html {
+    font-family: "system-ui";
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    border:1px dashed #09f;
+    border-radius: 10px;
+    margin:80px;
+    padding:25px;
+}
+
+.caja {
+    display: flex;
+    width: 7rem;
+    height: 5rem;
+    border: 1px solid grey;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 1px solid grey;
+}
+
+footer {
+    margin-top: 25px;
+    border-top: 1px solid grey;
+}

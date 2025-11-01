@@ -1,0 +1,25 @@
+{
+  "name": "master-front-lemoncode",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "01-modulo-layout/laboratorio-basico/*",
+    "01-modulo-layout/laboratorio-avanzado",
+    "01-modulo-layout/laboratorio-extra"
+  ],
+  "scripts": {
+    "dev:01": "npm run dev --workspace=laboratorio-basico-01-ejercicio",
+    "dev:02": "npm run dev --workspace=laboratorio-basico-02-ejercicio",
+    "dev:03": "npm run dev --workspace=laboratorio-basico-03-ejercicio",
+    "dev:04": "npm run dev --workspace=laboratorio-basico-04-ejercicio",
+    "dev:avanzado": "npm run dev --workspace=laboratorio-avanzado",
+    "dev:extra": "npm run dev --workspace=laboratorio-extra",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.77.4",
+    "vite": "^7.1.12"
+  }
+}

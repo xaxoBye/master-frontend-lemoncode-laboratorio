@@ -1,0 +1,39 @@
+.fuente-principal {
+    font-family: BlinkMacSystemFont;
+}
+
+.fuente-secundaria {
+    font-family: monospace;
+}
+
+.base {
+    background-color: blue;
+}
+
+.importante {
+    background-color: rgb(19, 29, 118);
+}
+
+.alerta {
+    background-color: rgb(19, 211, 249);
+}
+
+.sombreado {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.caja {
+    border-radius: 5px;
+}
+
+.resultado-tema {
+    font-size: 0;
+}
+
+.resultado-tema::after {
+    content: "Resultado tema B";
+    font-size: 1rem;
+    display:block;
+    margin-top: 25px;
+    padding-bottom: 25px;
+}

@@ -1,0 +1,88 @@
+* {
+  --texto-tipografia: system-ui, verdana, Tahoma, sans-serif;
+  --color-verde: rgb(8, 103, 8);
+  --boton-hover: rgb(22, 169, 22);
+  --boton-active: rgb(22, 167, 169);
+  --color-fondo: white;
+  --color-marco:rgb(45, 27, 10);
+    box-sizing: border-box;
+}
+
+
+html {
+  font-family: var(--texto-tipografia);
+  background-color: #ccc;
+  min-height: 100vh;
+}
+
+body{
+  display: flex;
+  gap: 50px;
+  margin:0px;
+}
+
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 250px;
+  min-width: 200px;
+  border: 2px solid var(--color-marco);
+  overflow: hidden;
+  background-color: var(--color-fondo);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card figcaption {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card h1 {
+  font-weight: 400;
+  margin: 0px;
+  padding:0px;
+}
+
+.card p {
+  margin:0px;
+}
+.card span {
+  justify-self: end;
+  align-self: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin:0px;
+}
+
+.card span em {
+  color: var(--color-verde);
+}
+
+.card a  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  text-decoration: none;
+  width: 100%;
+  height: 2rem;
+  background-color: var(--color-verde);
+  color: var(--color-fondo);
+
+  &:hover {
+    background-color: var(--boton-hover);
+  }
+
+  &:active {
+    background-color: var(--boton-active);
+  } 
+}
+
+
+

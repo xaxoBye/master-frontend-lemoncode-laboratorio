@@ -1,0 +1,35 @@
+.fuente-principal {
+    font-family: arial;
+}
+
+.fuente-secundaria {
+    font-family: Tahoma;
+}
+
+.base {
+    background-color: red;
+}
+
+.importante {
+    background-color: rgb(97, 31, 31);
+}
+
+.alerta {
+    background-color: rgb(244, 193, 193);
+}
+
+.sombreado {
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.resultado-tema {
+    font-size: 0;
+}
+
+.resultado-tema::after {
+    content: "Resultado tema A";
+    font-size: 1rem;
+    display:block;
+    margin-top: 25px;
+    padding-bottom: 25px;
+}

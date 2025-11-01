@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/ico-lemoncode.png" />
+    <title>Laboratorio Módulo Layout - Ejercicio 2</title>
+    <link rel="stylesheet" href="./css/principal.css">
+</head>
+<body>
+    <header>
+        <h1>Laborarotrio Módulo Layout - BÁSICO</h1>
+        <h3>Crear dos temas distintos y mostrar los resultados en una página</h3>
+        <h5>Ejercicio 2</h5>
+    </header>
+    <main>
+        <section>
+            <h3 class="resultado-tema">Resultado tema</h3>
+            <section>
+                <box class="caja base">Base</box>
+                <box class="caja importante">Important</box>
+                <box class="caja alerta">Warning</box>
+            </section>
+
+            <p class="fuente-principal">Fuente principal</p>
+            <p class="fuente-secundaria">Fuente secundaria</p>
+            <box class="caja sombreado">Box with shadow</box>
+        </section>
+        <aside>
+            <p>Para modificar el tema comentar/descomentar la linea del fichero <strong>principal.css</strong></p>
+            <pre>
+                
+                @import url('./basico.css');
+                @import url('./tema-A.css'); 
+                /* @import url('./tema-B.css'); */
+            </pre>
+        </aside>
+
+    </main>
+    <footer>
+        <p>Los cambios en el tema afectan a las siguientes características: </p>
+        <ul>
+            <li>Color</li>
+            <li>Fuente</li>
+            <li>Border Radius</li>
+            <li>Shadow Box</li>
+        </ul>
+        <p><small>Para visualizar los cambios debería ser suficiente importar un tema u otro en el fichero de estilos principales</small></p>
+    </footer>
+</body>
+</html>
