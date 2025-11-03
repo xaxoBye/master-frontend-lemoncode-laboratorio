@@ -198,12 +198,14 @@ li:hover {
   .list {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 
     .item {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       width: 100%;
+      border: none;
 
       img{
         padding-left: 20px;
