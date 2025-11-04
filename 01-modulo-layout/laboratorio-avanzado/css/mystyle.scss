@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+$txt-standard: 'Jost', system-ui, verdana, tahoma, sans-serif;
+$color-fondo: #141414;
+$color-text-claro: white;
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $txt-standard;
+  background-color: $color-fondo;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  height: calc(100vh - 20px);
+  width: calc(100vw - 40px);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:0px 10px;
+  flex-grow: 1;
+  min-height: 170px;
+  max-height: 180px;
+}
+
+.platform-title {
+  font-size: 1.5rem;
+  color: $color-text-claro;
+}
+
+.section-title {
+  color: $color-text-claro;
+}
+
+.header-buttons{
+  color: $color-text-claro;
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap:25px;
+}
+
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  line-height: 0px;
+  flex-grow: 1;
+  width: 100%;
+
+  .top-item {
+    flex: 1;
+    min-width: 225px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.first, .second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(3, 95, 95);
+  line-height: 0px;
+  flex-grow: 1;
+
+  .item {
+    flex: 1;
+    min-width: 250px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#top-text::before {
+  content: "5";
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.item:hover {
+  
+  img {
+    box-sizing: border-box;
+    transform: scale(1.1); 
+    box-shadow: 0 6px 8px rgba(224, 221, 221, 0.921);
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+  }
+}
+
+.header-buttons {
+  gap: 1px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 3rem;
+    border-radius: 5px;
+  }
+
+  div:hover {
+    background-color: white;
+    color: #09f;
+    cursor: pointer;
+  }
+}
+
+
+
