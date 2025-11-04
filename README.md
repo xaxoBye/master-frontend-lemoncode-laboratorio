@@ -33,5 +33,5 @@ La configuración del npm esta en la raíz del proyecto. **master-frontend-lemon
 
 ##### laboratorio-avanzado
 
-- [ ] ejercicio único
-      </code>
+- ✅ ejercicio único (04/11/2025)
+  </code>
